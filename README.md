@@ -1,5 +1,10 @@
 ## postgresimporter
 
+[![Build Status](https://travis-ci.com/romnnn/postgresimporter.svg?branch=master)](https://travis-ci.com/romnnn/postgresimporter)
+[![PyPI License](https://img.shields.io/pypi/l/postgresimporter)](https://pypi.org/project/postgresimporter/)
+[![PyPI Version](https://img.shields.io/pypi/v/postgresimporter)](https://pypi.org/project/postgresimporter/)
+[![PyPI Python versions](https://img.shields.io/pypi/pyversions/postgresimporter)](https://pypi.org/project/postgresimporter/)
+
 This repository provides a python wrapper script based on [pgfutter](https://github.com/lukasmartinelli/pgfutter)
 to load dumped csv data into a `postgres` database. It exposes customization hooks
 and comes as a container or standalone script.

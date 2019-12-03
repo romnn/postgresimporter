@@ -1,0 +1,22 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+isort = "*"
+flake8 = "*"
+pre-commit = "*"
+m2r = "*"
+
+[packages]
+progressbar2 = "*"
+pyfakefs = "*"
+chardet = "*"
+blessings = "*"
+pygments = "*"
+prettytable = "*"
+
+[requires]
+python_version = "3.7"

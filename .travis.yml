@@ -1,0 +1,14 @@
+language: python
+python:
+  - 3.7
+os: linux
+install:
+  - pipenv install --dev
+script:
+  - pip install -e .
+  - python -m postgresimporter.tests.run_tests
+deploy:
+  provider: pypi
+  username: __token__
+  on:
+    tags: true

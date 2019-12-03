@@ -1,0 +1,30 @@
+version: "3.6"
+
+services:
+  loader:
+    build:
+      context: ../
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+      - pgadmin
+    environment:
+      DB_NAME: postgres
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: example
+    # Specify cli options here. See README for available options
+    command:
+      - --log-level=DEBUG
+      # - --disable-import
+      # - --disable-unzip
+      # - --post-load=/post-dump.sql
+      # - --pre-load=/reset-db.sql
+      - /import
+    # Map the source directory at the path specified with --sources
+    # Map any pre and post load hook scripts if specified with --post-load and --pre-load
+    volumes:
+      - ../postgresimporter/hooks/reset-db.sql:/reset-db.sql
+      - ../postgresimporter/hooks/post-dump.sql:/post-dump.sql
+      - /home/roman/bp:/import

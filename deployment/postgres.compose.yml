@@ -1,0 +1,36 @@
+version: "3.6"
+
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+    volumes:
+      # Use a volume mapping if you want the database data to persist
+      # - ./dbdata:/var/lib/postgresql/data
+      - ./pgadmin/pgpass.txt:/run/secrets/postgres-passwd
+    ports:
+      # Map the database to the host to run queries directly
+      - 5432:5432
+    logging:
+      driver: none
+
+  pgadmin:
+    image: dpage/pgadmin4
+    depends_on:
+      - postgres
+    restart: always
+    environment:
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - 8080:80
+    volumes:
+      - ./pgadmin/pgadmin-servers.json:/pgadmin4/servers.json
+      - ./pgadmin/pgadmin-entrypoint.sh:/entrypoint.sh
+      - ./pgadmin/pgpass.txt:/.pgpass
+    entrypoint: "/bin/sh /entrypoint.sh"
+    logging:
+      driver: none

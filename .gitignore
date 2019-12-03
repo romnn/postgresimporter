@@ -5,3 +5,5 @@ pgfutter
 .idea/
 dbdata/
 **/hooks/post-load.sql
+MANIFEST
+dist/

@@ -77,17 +77,33 @@ def parse():
     )
 
     # Database connection options
+    default_db_name = "postgres"
+    default_db_host = "localhost"
+    default_db_port = 5432
+    default_db_user = "postgres"
     parser.add_argument(
-        "--db-name", type=str, dest="db_name", default="postgres", help="database name"
+        "--db-name",
+        type=str,
+        dest="db_name",
+        help=f'database name (default "{default_db_name}")',
     )
     parser.add_argument(
-        "--db-host", type=str, dest="db_host", default="localhost", help="database host"
+        "--db-host",
+        type=str,
+        dest="db_host",
+        help=f'database host (default "{default_db_host}")',
     )
     parser.add_argument(
-        "--db-port", type=int, dest="db_port", default=5432, help="database port"
+        "--db-port",
+        type=int,
+        dest="db_port",
+        help=f'database port (default "{default_db_port}")',
     )
     parser.add_argument(
-        "--db-user", type=str, dest="db_user", default="postgres", help="database user"
+        "--db-user",
+        type=str,
+        dest="db_user",
+        help=f'database user (default "{default_db_user}"")',
     )
     parser.add_argument(
         "--db-password", type=str, dest="db_password", help="database password"
@@ -103,10 +119,10 @@ def parse():
 
     args, unknown = parser.parse_known_args()
 
-    # Check for environment variables with higher precedence
-    args.db_name = args.db_name or os.environ.get("DB_NAME")
-    args.db_host = args.db_host or os.environ.get("DB_HOST")
-    args.db_port = args.db_port or os.environ.get("DB_PORT")
-    args.db_user = args.db_user or os.environ.get("DB_USER")
+    # Check for environment variables with lower precedence
+    args.db_name = args.db_name or os.environ.get("DB_NAME") or default_db_name
+    args.db_host = args.db_host or os.environ.get("DB_HOST") or default_db_host
+    args.db_port = args.db_port or os.environ.get("DB_PORT") or default_db_port
+    args.db_user = args.db_user or os.environ.get("DB_USER") or default_db_user
     args.db_password = args.db_password or os.environ.get("DB_PASSWORD")
     return args, unknown

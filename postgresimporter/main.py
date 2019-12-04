@@ -552,6 +552,8 @@ async def shutdown(exit_signal, event_loop):
 
 async def _main():
     args, unknown = cli.parse()
+    if len(unknown) > 0:
+        [logger.warning("Unknown argument %s" % arg) for arg in unknown]
 
     # Flatten hook script inputs
     args.sources = [item for sublist in args.sources or list() for item in sublist]
@@ -563,9 +565,6 @@ async def _main():
         logging, "INFO" if not args.log_level else args.log_level.upper()
     )
     logging.basicConfig(level=log_level)
-
-    if len(unknown) > 0:
-        [logger.warning("Unknown argument %s" % arg) for arg in unknown]
     if args.all:
         logger.warning(
             "Will unzip and import everything again. This might take a while..."

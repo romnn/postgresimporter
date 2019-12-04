@@ -13,7 +13,7 @@ def get_long_description() -> str:
 setup(
     name="postgresimporter",
     packages=["postgresimporter"],
-    version="0.1.1",
+    version="0.1.2",
     license="MIT",
     description=(
         "A simple python wrapper script based on pgfutter "

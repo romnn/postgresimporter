@@ -1,6 +1,0 @@
-progressbar2
-pyfakefs
-chardet
-blessings
-pygments
-prettytable

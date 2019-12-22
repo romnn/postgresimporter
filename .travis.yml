@@ -9,8 +9,8 @@ install:
   - pip install m2r
 script:
   - pip install -e .
-  # - python -m postgresimporter.tests.run_tests
-  - pipenv run pytest
+  - python -m postgresimporter.tests.run_tests
+  # - pipenv run pytest
   # Ignore errors when compiling
   # - docker run --entrypoint pip python:latest install postgresimporter || true
 deploy:

@@ -25,7 +25,14 @@ setup(
     url="https://github.com/romnnn/postgresimporter",
     keywords=["postgres", "PostgreSQL", "database", "import", "load", "dump", "CSV"],
     python_requires=">=3.6",
-    install_requires=["jinja2"],
+    install_requires=[
+        "jinja2",
+        "dataclasses",
+        "progressbar2",
+        "chardet",
+        "prettytable",
+    ],
+    extras_require=dict(dev=["blessings", "pygments", "m2r", "pyfakefs"]),
     package_data={"postgresimporter": ["hooks"]},
     classifiers=[
         "Environment :: Console",

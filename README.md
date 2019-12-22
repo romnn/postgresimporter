@@ -158,7 +158,7 @@ Before you commit, make sure to run `./pre-commit.sh` to resolve any
 errors in advance.
 
 After merging new changes, a new version is deployed to [pypi.org](https://pypi.org) when the version is tagged
-with `bump2version (subminor|minor|major)`.
+with `bump2version (patch|minor|major)`.
 
 #### Testing
 This project is not under active maintenance and not tested for production use.

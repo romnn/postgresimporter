@@ -11,7 +11,7 @@ script:
   # Install for production
   - pip install -e .
   # Install for development
-  - pip install -e . [dev]
+  - pip install -e .[dev]
   - python -m postgresimporter.tests.run_tests
   # - pipenv run pytest
   # Ignore errors when compiling

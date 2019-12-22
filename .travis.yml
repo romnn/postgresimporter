@@ -1,12 +1,18 @@
 language: python
 python:
-- 3.7
+  - 3.7
 os: linux
+services:
+  - docker
 install:
-- pipenv install --dev
+  # - pipenv install --dev
+  - pip install m2r
 script:
-- pip install -e .
-- python -m postgresimporter.tests.run_tests
+  - pip install -e .
+  # - python -m postgresimporter.tests.run_tests
+  - pipenv run pytest
+  # Ignore errors when compiling
+  # - docker run --entrypoint pip python:latest install postgresimporter || true
 deploy:
   provider: pypi
   username: __token__

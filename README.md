@@ -154,8 +154,11 @@ pipenv run flake8
 ```
 
 These above checks are also configured as a git pre commit hook together with the TestSuite.
-Before you commit, make sure to run `pipenv run pre-commit run --all-files` to resolve any
+Before you commit, make sure to run `./pre-commit.sh` to resolve any
 errors in advance.
+
+After merging new changes, a new version is deployed to [pypi.org](https://pypi.org) when the version is tagged
+with `bump2version (subminor|minor|major)`.
 
 #### Testing
 This project is not under active maintenance and not tested for production use.

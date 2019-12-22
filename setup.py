@@ -16,7 +16,7 @@ except ImportError:
 setup(
     name="postgresimporter",
     packages=["postgresimporter"],
-    version="0.1.2",
+    version="0.1.3",
     license="MIT",
     description=short_description,
     long_description=long_description,

@@ -1,20 +1,20 @@
 import typing
 import unittest
 
-from postgresimporter.tests.test_runner import ColoredTestRunner
+import test_runner
 
 
 def test_cases(**_kwargs):
 
-    import postgresimporter.tests.test_cli
-    import postgresimporter.tests.test_load
-    import postgresimporter.tests.test_unzip
+    import test_cli
+    import test_load
+    import test_unzip
 
     cases = list()
     cases += [
-        postgresimporter.tests.test_cli.CLITest,
-        postgresimporter.tests.test_load.LoadTest,
-        postgresimporter.tests.test_unzip.UnzipTest,
+        test_cli.CLITest,
+        test_load.LoadTest,
+        test_unzip.UnzipTest,
     ]
     return cases
 
@@ -32,7 +32,7 @@ def test_suite(**kwargs) -> typing.Union[unittest.TestSuite, unittest.TestCase]:
 
 if __name__ == "__main__":
     # Run the test suite
-    result = ColoredTestRunner(failfast=True, verbosity=2).run(test_suite())
+    result = test_runner.ColoredTestRunner(failfast=True, verbosity=2).run(test_suite())
     if result.wasSuccessful():
         exit(0)
     else:

@@ -1,5 +1,4 @@
 import asyncio
-import concurrent.futures
 import logging
 from dataclasses import dataclass
 
@@ -39,7 +38,7 @@ async def run(
                 completion(process, cmd, stderr, stdout)
         elif queue:
             queue.put_nowait((base_priority, PrioritizedItem(process, cmd)))
-    except (asyncio.CancelledError, concurrent.futures.CancelledError):
+    except (asyncio.CancelledError):  # , concurrent.futures.CancelledError):
         if process:
             process.terminate()
         raise

@@ -1,5 +1,5 @@
 from distutils.core import setup
-from pathlib import Path
+from os import path
 
 short_description = (
     "A simple python wrapper script based on pgfutter "
@@ -9,8 +9,9 @@ short_description = (
 try:
     import m2r
 
-    long_description = m2r.parse_from_file(Path().parent / "README.md")
-except ImportError:
+    current = path.dirname(path.realpath(__file__))
+    long_description = m2r.parse_from_file(path.join(current, "README.md"))
+except (ImportError, OSError):
     long_description = short_description
 
 setup(

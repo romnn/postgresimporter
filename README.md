@@ -153,8 +153,8 @@ pipenv run isort
 pipenv run flake8
 ```
 
-These above checks are also configured as a git pre commit hook together with the TestSuite.
-Before you commit, make sure to run `./pre-commit.sh` to resolve any
+These above checks are also configured as a git pre commit hook together with the test suite.
+Before you commit, make sure to run `pre-commit run --all-files` to resolve any
 errors in advance.
 
 After merging new changes, a new version is deployed to [pypi.org](https://pypi.org) when the version is tagged

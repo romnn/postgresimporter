@@ -3,7 +3,7 @@ import pathlib
 from contextlib import contextmanager
 from unittest import mock
 
-from . import common
+import common
 
 
 class CLITest(common.BaseTest):

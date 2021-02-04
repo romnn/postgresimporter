@@ -123,10 +123,7 @@ class BaseTest(unittest.TestCase):
             mock_process.communicate.return_value = mock_communicate
             mock_process.stdout.read.return_value = mock_read
 
-            mock_subprocess_result = asyncio.Future()
-            mock_subprocess_result.set_result(mock_process)
-
-            mocked_subprocess.return_value = mock_subprocess_result
+            mocked_subprocess.return_value = mock_process
             yield mocked_subprocess
 
     @contextmanager

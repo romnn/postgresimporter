@@ -7,8 +7,11 @@ verify_ssl = true
 black = "==19.10b0"
 isort = "*"
 flake8 = "*"
+mypy = "*"
+pytest = "*"
 pre-commit = "*"
 m2r = "*"
+tox = "*"
 
 [packages]
 progressbar2 = "*"

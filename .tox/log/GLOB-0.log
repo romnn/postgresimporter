@@ -1,0 +1,44 @@
+action: GLOB, msg: packaging
+cwd: /home/roman/dev/postgresimporter
+cmd: /home/roman/.local/share/virtualenvs/postgresimporter-hXbzC1BT/bin/python setup.py sdist --formats=zip --dist-dir .tox/dist
+running sdist
+running check
+/usr/lib/python3.8/distutils/dist.py:274: UserWarning: Unknown distribution option: 'python_requires'
+  warnings.warn(msg)
+/usr/lib/python3.8/distutils/dist.py:274: UserWarning: Unknown distribution option: 'install_requires'
+  warnings.warn(msg)
+/usr/lib/python3.8/distutils/dist.py:274: UserWarning: Unknown distribution option: 'extras_require'
+  warnings.warn(msg)
+/usr/lib/python3.8/distutils/dist.py:274: UserWarning: Unknown distribution option: 'entry_points'
+  warnings.warn(msg)
+warning: sdist: manifest template 'MANIFEST.in' does not exist (using default file list)
+
+warning: sdist: standard file not found: should have one of README, README.txt, README.rst
+
+writing manifest file 'MANIFEST'
+creating postgresimporter-1.0.0
+creating postgresimporter-1.0.0/postgresimporter
+making hard links in postgresimporter-1.0.0...
+hard linking setup.cfg -> postgresimporter-1.0.0
+hard linking setup.py -> postgresimporter-1.0.0
+hard linking postgresimporter/__init__.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/cli.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/csvcount.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/exec.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/import.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/main.py -> postgresimporter-1.0.0/postgresimporter
+hard linking postgresimporter/utils.py -> postgresimporter-1.0.0/postgresimporter
+creating '.tox/dist/postgresimporter-1.0.0.zip' and adding 'postgresimporter-1.0.0' to it
+adding 'postgresimporter-1.0.0'
+adding 'postgresimporter-1.0.0/postgresimporter'
+adding 'postgresimporter-1.0.0/setup.cfg'
+adding 'postgresimporter-1.0.0/setup.py'
+adding 'postgresimporter-1.0.0/PKG-INFO'
+adding 'postgresimporter-1.0.0/postgresimporter/exec.py'
+adding 'postgresimporter-1.0.0/postgresimporter/main.py'
+adding 'postgresimporter-1.0.0/postgresimporter/utils.py'
+adding 'postgresimporter-1.0.0/postgresimporter/cli.py'
+adding 'postgresimporter-1.0.0/postgresimporter/__init__.py'
+adding 'postgresimporter-1.0.0/postgresimporter/csvcount.py'
+adding 'postgresimporter-1.0.0/postgresimporter/import.py'
+removing 'postgresimporter-1.0.0' (and everything under it)

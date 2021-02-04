@@ -3,9 +3,9 @@ import pathlib
 from contextlib import contextmanager
 from unittest import mock
 
-from postgresimporter import utils
+import common
 
-from . import common
+from postgresimporter import utils
 
 
 class LoadTest(common.BaseTest):

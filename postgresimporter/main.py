@@ -110,7 +110,9 @@ class Loader:
                     0,
                     round(
                         self.zip_done
-                        + sum(l.get("percent", 0) for l in self.load_done.values()),
+                        + sum(
+                            load.get("percent", 0) for load in self.load_done.values()
+                        ),
                         ndigits=2,
                     ),
                 ),

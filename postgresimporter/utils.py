@@ -26,9 +26,9 @@ def files_in(dir_or_file, of_type=None):
     )
 
 
-def merge_dicts(l):
+def merge_dicts(d):
     merged = dict()
-    [merged.update(ll) for ll in l]
+    [merged.update(dd) for dd in d]
     return merged
 
 

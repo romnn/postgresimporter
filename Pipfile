@@ -12,6 +12,7 @@ pytest = "*"
 pre-commit = "*"
 m2r = "*"
 tox = "*"
+invoke = "*"
 
 [packages]
 progressbar2 = "*"

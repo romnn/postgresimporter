@@ -6,7 +6,7 @@ short_description = (
     "to load multiple dumped csv files into a postgres database."
 )
 
-version = "1.0.0"
+version = "1.0.1"
 
 try:
     import m2r

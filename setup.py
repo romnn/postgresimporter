@@ -6,6 +6,8 @@ short_description = (
     "to load multiple dumped csv files into a postgres database."
 )
 
+version = "1.0.0"
+
 try:
     import m2r
 
@@ -17,7 +19,7 @@ except (ImportError, OSError):
 setup(
     name="postgresimporter",
     packages=["postgresimporter"],
-    version="1.0.0",
+    version=version,
     license="MIT",
     description=short_description,
     long_description=long_description,

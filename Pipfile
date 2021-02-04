@@ -17,6 +17,3 @@ chardet = "*"
 blessings = "*"
 pygments = "*"
 prettytable = "*"
-
-[requires]
-python_version = "3.7"

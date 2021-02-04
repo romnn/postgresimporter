@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
     author="romnn",
     author_email="contact@romnn.com",
-    url="https://github.com/romnnn/postgresimporter",
+    url="https://github.com/romnn/postgresimporter",
     keywords=["postgres", "PostgreSQL", "database", "import", "load", "dump", "CSV"],
     python_requires=">=3.6",
     install_requires=[

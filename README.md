@@ -1,6 +1,6 @@
 ## postgresimporter
 
-[![Build Status](https://travis-ci.com/romnnn/postgresimporter.svg?branch=master)](https://travis-ci.com/romnnn/postgresimporter)
+[![Build Status](https://travis-ci.com/romnn/postgresimporter.svg?branch=master)](https://travis-ci.com/romnn/postgresimporter)
 [![PyPI License](https://img.shields.io/pypi/l/postgresimporter)](https://pypi.org/project/postgresimporter/)
 [![PyPI Version](https://img.shields.io/pypi/v/postgresimporter)](https://pypi.org/project/postgresimporter/)
 [![PyPI Python versions](https://img.shields.io/pypi/pyversions/postgresimporter)](https://pypi.org/project/postgresimporter/)

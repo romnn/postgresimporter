@@ -1,9 +1,9 @@
 FROM golang:latest AS build
 
 RUN go get -v \
-    github.com/romnnn/pgfutter
+    github.com/romnn/pgfutter
 
-ENV APP_DIR=$GOPATH/src/github.com/romnnn/pgfutter/
+ENV APP_DIR=$GOPATH/src/github.com/romnn/pgfutter/
 RUN mkdir -p $APP_DIR
 WORKDIR $APP_DIR
 
